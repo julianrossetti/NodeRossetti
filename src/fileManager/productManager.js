@@ -1,9 +1,10 @@
 
 export class ProductManager {
-    static products = [{id: "1", name: "jarro"}]
+    static products = []
 
     //Almacenar producto en el archivo
     static crearProducto(product){
+        product.id = products.length() + 1 
         products.push(product)
     }
 
