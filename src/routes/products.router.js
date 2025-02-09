@@ -10,11 +10,10 @@ let productos = ProductManager.leerProductos()
  * Retornar todos los productos
  */
 router.get('/', (req, res) => {
-    if(productos.length === 0){
-        res.status(400).json({message: "No hay productos"})
-    }
-    res.send(productos)
+    res.render("index", { productos: productos })
 })
+
+
 
 /** Método GET: PARA OBTENER UN RECURSO
  * Retornar un producto según su ID .get(/:id)

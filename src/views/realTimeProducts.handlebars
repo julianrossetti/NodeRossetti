@@ -1,0 +1,19 @@
+<div>
+    <h1>Crear nuevo producto:</h1>
+    <input type="text" id="ProductName" placeholder="Nombre del producto">
+    <input type="text" id="ProductPrice" placeholder="Precio del producto">
+    <input type="text" id="ProductStock" placeholder="Stock del producto">
+    <button id="CreateProd">Crear producto</button>
+</div>
+<div id="productContainer">
+        {{#each productos}}
+        <div>
+            <h2>Producto: {{name}}</h2>
+            <p>Precio: {{price}}</p>
+            <p>Stock: {{stock}}</p>
+            <button id="delete">Eliminar</button>
+        </div>
+    {{/each}}
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
